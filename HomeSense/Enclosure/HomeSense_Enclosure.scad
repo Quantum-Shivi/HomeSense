@@ -148,8 +148,8 @@ module display_retainer() {
     difference() {
         translate([0, display_center_y, case_z-roof-3.2])
             rounded_prism(retainer_outer_x, retainer_outer_y, retainer_thickness, 2);
-        translate([0, display_center_y, case_z-roof-3.3])
-            rounded_prism(retainer_inner_x, retainer_inner_y, retainer_thickness+0.2, display_corner_r);
+        
+            
         for (sx = [-1, 1], sy = [-1, 1]) {
             translate([sx*retainer_screw_x, display_center_y+sy*retainer_screw_y, case_z-roof-3.3])
                 cylinder(d=retainer_screw_d, h=retainer_thickness+0.2);
